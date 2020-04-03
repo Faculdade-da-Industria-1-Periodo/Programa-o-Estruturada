@@ -12,7 +12,7 @@ int main()
 
     media = (num1 + num2) / 2;
 
-    printf("A média de %d + %d é %d", num1, num2, media);
+    printf("A média de %d + %d é %d\n", num1, num2, media);
 
     return 0;
 }
