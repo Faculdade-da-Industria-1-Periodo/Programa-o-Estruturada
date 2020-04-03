@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1585881987 source:/home/gustavorattmann/projetos/aulas/programacao_estruturada/exercicio_basico_variaveis/Exercicio2/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1585881987 source:/home/gustavorattmann/projetos/aulas/programacao_estruturada/exercicio_basico_variaveis/Exercicio02/main.c
+	<stdio.h>
+	<stdlib.h>
+
