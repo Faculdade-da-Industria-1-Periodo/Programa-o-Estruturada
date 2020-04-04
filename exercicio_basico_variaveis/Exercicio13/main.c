@@ -16,7 +16,7 @@ int main()
 
     media = ((nota1 * peso1) + (nota2 * peso2)) / 2;
 
-    printf("A média ponderada da nota %.1f mais a nota %.1f é %.1f\n", nota1, nota2, media);
+    printf("A média ponderada da nota %g mais a nota %g é %g\n", nota1, nota2, media);
 
     return 0;
 }
