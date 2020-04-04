@@ -14,5 +14,6 @@ int main()
     printf("Valor da variável: %d\n", valor);
     printf("Endereço da variável na memória: %d\n", &valor);
     printf("Valor da variável dentro do ponteiro: %d\n", *ptr);
-    printf("Endereço do ponteiro na memória: %d\n", ptr);
+    printf("Endereço da variável dentro do ponteiro: %d\n", ptr);
+    printf("Endereço do ponteiro na memória: %d\n", &ptr);
 }
