@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1586022093 source:/home/gustavorattmann/projetos/aulas/programacao_estruturada/exercicio_basico_variaveis/Exercicio13/main.c
+	<stdio.h>
+	<stdlib.h>
+
