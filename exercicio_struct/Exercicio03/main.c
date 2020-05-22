@@ -1,56 +1,56 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+struct ENDERECO_COMERCIAL{
+    char rua[20];
+    int numero;
+};
+
+struct ENDERECO_RESIDENCIAL{
+    char rua[20];
+    int numero;
+};
+
+struct CADASTRO{
+    char nome[16];
+    int idade;
+    struct ENDERECO_COMERCIAL comercial;
+    struct ENDERECO_RESIDENCIAL residencial;
+};
+
 int main()
 {
     int contador;
 
-    struct ENDERECO_COMERCIAL{
-        char rua[20];
-        int numero;
-	};
+    struct CADASTRO cadastro[5];
 
-	struct ENDERECO_RESIDENCIAL{
-        char rua[20];
-        int numero;
-	};
+    for(contador = 1; contador < 6; contador++){
+          printf("Cadastro %d\n", contador);
 
-	struct CADASTRO{
-        char nome[16];
-        int idade;
-        struct ENDERECO_COMERCIAL comercial;
-        struct ENDERECO_RESIDENCIAL residencial;
-	};
+          printf("Digite um nome: ");
+          scanf(" %[^\n]s", &cadastro[contador].nome);
 
-	struct CADASTRO cadastro[5];
+          printf("Digite a idade: ");
+          scanf("%d", &cadastro[contador].idade);
 
-	for(contador = 1; contador < 6; contador++){
-        printf("Cadastro %d\n", contador);
+          printf("Digite o endereço comercial: ");
+          scanf(" %[^\n]s", &cadastro[contador].comercial.rua);
 
-        printf("Digite um nome: ");
-        scanf(" %[^\n]s", &cadastro[contador].nome);
+          printf("Digite o número do endereço comercial: ");
+          scanf("%d", &cadastro[contador].comercial.numero);
 
-        printf("Digite a idade: ");
-        scanf("%d", &cadastro[contador].idade);
+          printf("Digite o endereço residencial: ");
+          scanf(" %[^\n]s", &cadastro[contador].residencial.rua);
 
-        printf("Digite o endereço comercial: ");
-        scanf(" %[^\n]s", &cadastro[contador].comercial.rua);
+          printf("Digite o número do endereço residencial: ");
+          scanf("%d", &cadastro[contador].residencial.numero);
 
-        printf("Digite o número do endereço comercial: ");
-        scanf("%d", &cadastro[contador].comercial.numero);
+          if(contador < 5){
+              printf("\n");
+          }
+    }
 
-        printf("Digite o endereço residencial: ");
-        scanf(" %[^\n]s", &cadastro[contador].residencial.rua);
-
-        printf("Digite o número do endereço residencial: ");
-        scanf("%d", &cadastro[contador].residencial.numero);
-
-        if(contador < 5){
-            printf("\n");
-        }
-	}
-
-	printf("\n*******DADOS CADASTRADOS********\n");
+    printf("\n*******DADOS CADASTRADOS********\n");
 
     for(contador = 1; contador < 6; contador++){
         printf("Nome: %s\n", cadastro[contador].nome);
