@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1589411249 source:/home/gustavorattmann/projetos/faculdade/programacao_estruturada/exercicio_struct/Exercicio05/main.c
+	<stdio.h>
+	<stdlib.h>
+
