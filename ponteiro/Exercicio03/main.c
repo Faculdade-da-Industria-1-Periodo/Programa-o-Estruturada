@@ -12,8 +12,8 @@ int main()
 
     cadastro = (struct CADASTRO*) malloc(sizeof(struct CADASTRO));
 
-    strcpy(cadastro->nome, "Gustavo Rattmann");
-    strcpy(cadastro->telefone, "(41) 99208-5757");
+    strcpy(cadastro->nome, "Pessoa");
+    strcpy(cadastro->telefone, "(41) 99999-9999");
 
     printf("Nome: %s\n", cadastro->nome);
     printf("Telefone: %s\n", cadastro->telefone);
