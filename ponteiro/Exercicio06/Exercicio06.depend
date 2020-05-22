@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1590029825 source:/home/gustavorattmann/projetos/faculdade/programacao_estruturada/ponteiro/Exercicio06/main.c
+	<stdio.h>
+	<stdlib.h>
+
