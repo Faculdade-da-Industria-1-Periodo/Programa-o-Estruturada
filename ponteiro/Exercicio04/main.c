@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 struct COMERCIAL {
     char endereco[51], bairro[26], cidade[31], uf[3], cep[11];
@@ -21,13 +22,15 @@ struct CADASTRO {
 
 int main()
 {
+    setlocale(LC_ALL, "Portuguese");
+
     struct CADASTRO *cadastro;
 
     cadastro = (struct CADASTRO*) malloc(sizeof(struct CADASTRO));
 
     printf("===== Realize seu cadastro =====\n");
-    printf("Por favor, cadastre o CEP no seguinte padrÃ£o: xxxxx-xxx\n");
-    printf("Cadastre seu telefone no seguinte padrÃ£o:\nCelular: (ddd) xxxxx-xxxx\nTelefone fixo: (ddd) xxxx-xxxx\n\n");
+    printf("Por favor, cadastre o CEP no seguinte padrão: xxxxx-xxx\n");
+    printf("Cadastre seu telefone no seguinte padrão:\nCelular: (ddd) xxxxx-xxxx\nTelefone fixo: (ddd) xxxx-xxxx\n\n");
 
     printf("Nome Completo: ");
     scanf("%[^\n]s", &cadastro->nome);
@@ -39,11 +42,11 @@ int main()
     scanf("%[^\n]s", &cadastro->telefone);
     getchar();
 
-    printf("\n----- EndereÃ§o Comercial -----\n");
-    printf("EndereÃ§o: ");
+    printf("\n----- Endereço Comercial -----\n");
+    printf("Endereço: ");
     scanf("%[^\n]s", &cadastro->end_comercial.endereco);
     getchar();
-    printf("NÂº: ");
+    printf("Nº: ");
     scanf("%d", &cadastro->end_comercial.numero);
     getchar();
     printf("Bairro: ");
@@ -59,11 +62,11 @@ int main()
     scanf("%[^\n]s", &cadastro->end_comercial.cep);
     getchar();
 
-    printf("\n----- EndereÃ§o Residencial -----\n");
-    printf("Endereco: ");
+    printf("\n----- Endereço Residencial -----\n");
+    printf("Endereço: ");
     scanf("%[^\n]s", &cadastro->end_residencial.endereco);
     getchar();
-    printf("NÂº: ");
+    printf("Nº: ");
     scanf("%d", &cadastro->end_residencial.numero);
     getchar();
     printf("Bairro: ");
@@ -85,8 +88,8 @@ int main()
     printf("Nome: %s\n", cadastro->nome);
     printf("Idade: %d anos\n", cadastro->idade);
     printf("Telefone: %s\n", cadastro->telefone);
-    printf("EndereÃ§o comercial: %s, %u - %s - %s/%s - %s\n", cadastro->end_comercial.endereco, cadastro->end_comercial.numero, cadastro->end_comercial.bairro, cadastro->end_comercial.cidade, cadastro->end_comercial.uf, cadastro->end_comercial.cep);
-    printf("EndereÃ§o residencial: %s, %u - %s - %s/%s - %s\n", cadastro->end_residencial.endereco, cadastro->end_residencial.numero, cadastro->end_residencial.bairro, cadastro->end_residencial.cidade, cadastro->end_residencial.uf, cadastro->end_residencial.cep);
+    printf("Endereço comercial: %s, %u - %s - %s/%s - %s\n", cadastro->end_comercial.endereco, cadastro->end_comercial.numero, cadastro->end_comercial.bairro, cadastro->end_comercial.cidade, cadastro->end_comercial.uf, cadastro->end_comercial.cep);
+    printf("Endereço residencial: %s, %u - %s - %s/%s - %s\n", cadastro->end_residencial.endereco, cadastro->end_residencial.numero, cadastro->end_residencial.bairro, cadastro->end_residencial.cidade, cadastro->end_residencial.uf, cadastro->end_residencial.cep);
 
     free(cadastro);
     cadastro = NULL;
