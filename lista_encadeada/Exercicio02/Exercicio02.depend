@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1590019085 source:/home/gustavorattmann/projetos/faculdade/programacao_estruturada/lista_encadeada/Exercicio02/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
