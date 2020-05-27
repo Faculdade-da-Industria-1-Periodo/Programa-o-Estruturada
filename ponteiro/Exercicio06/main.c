@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 struct CADASTRO {
     char nome[51], telefone[16];
@@ -7,6 +8,8 @@ struct CADASTRO {
 
 int main()
 {
+    setlocale(LC_ALL, "Portuguese");
+
     struct CADASTRO *cadastro[5];
 
     printf("===== Realize seu cadastro =====\n");
