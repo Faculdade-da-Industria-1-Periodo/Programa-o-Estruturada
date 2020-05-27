@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <locale.h>
 
 struct CADASTRO {
-    char nome[50], telefone[15];
+    char nome[51], telefone[16];
 };
 
 int main()
 {
+    setlocale(LC_ALL, "Portuguese");
+
     struct CADASTRO *cadastro;
 
     cadastro = (struct CADASTRO*) malloc(sizeof(struct CADASTRO));
