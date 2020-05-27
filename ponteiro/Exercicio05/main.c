@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <locale.h>
 
 struct PRODUTO_ESTATICO {
     int quantidade;
@@ -16,6 +17,8 @@ struct PRODUTO_DINAMICO {
 
 int main()
 {
+    setlocale(LC_ALL, "Portuguese");
+
     struct PRODUTO_ESTATICO estatico;
     struct PRODUTO_DINAMICO *dinamico;
 
