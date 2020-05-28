@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 struct CADASTRO {
   char nome[50];
@@ -8,6 +9,8 @@ struct CADASTRO {
 
 int main()
 {
+    setlocale(LC_ALL, "Portuguese");
+
     int contador, verificador, maior;
 
     struct CADASTRO cadastro[5];
@@ -18,8 +21,12 @@ int main()
         printf("Cadastro da pessoa #%d\n", contador+1);
         printf("Nome: ");
         scanf(" %[^\n]s", &cadastro[contador].nome);
+        getchar();
+        fflush(stdin);
         printf("Idade: ");
         scanf("%d", &cadastro[contador].idade);
+        getchar();
+        fflush(stdin);
 
         if (contador < 4) {
             printf("\n");
