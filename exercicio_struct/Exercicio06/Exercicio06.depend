@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1590463459 source:c:\users\sup\documents\projetos\faculdade\programacao_estruturada\exercicio_struct\exercicio06\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
