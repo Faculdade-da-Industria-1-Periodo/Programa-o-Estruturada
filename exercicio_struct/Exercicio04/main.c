@@ -1,32 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <locale.h>
+
+struct CORRESPONDENCIA {
+    char rua[31], bairro[21], cidade[21], estado[21];
+    long int cep;
+    int numero;
+} a, b;
 
 int main()
 {
-    struct CORRESPONDENCIA {
-        char rua[30], bairro[20], cidade[20], estado[20];
-        long int cep;
-        int numero;
-    } a, b;
+    setlocale(LC_ALL, "Portuguese");
 
     printf("Digite o nome da rua: ");
     scanf(" %[^\n]s", &a.rua);
+    getchar();
+    fflush(stdin);
 
     printf("Digite o número: ");
     scanf("%d", &a.numero);
+    getchar();
+    fflush(stdin);
 
     printf("Digite o bairro: ");
     scanf(" %[^\n]s", &a.bairro);
+    getchar();
+    fflush(stdin);
 
     printf("Digite a cidade: ");
     scanf(" %[^\n]s", &a.cidade);
+    getchar();
+    fflush(stdin);
 
     printf("Digite o estado: ");
     scanf(" %[^\n]s", &a.estado);
+    getchar();
+    fflush(stdin);
 
     printf("Digite o CEP: ");
     scanf("%d", &a.cep);
+    getchar();
+    fflush(stdin);
 
     strcpy(b.rua, a.rua);
     strcpy(b.bairro, a.bairro);
